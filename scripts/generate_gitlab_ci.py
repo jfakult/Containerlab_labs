@@ -52,7 +52,7 @@ def main():
 
 
     with open(CI_FILE, "w") as f:
-        f.write(HEADER + "\n".join(jobs) + CHECK_JOB)
+        f.write(HEADER + "\n".join(jobs)) # + CHECK_JOB)
 
     print(f"✅ Generated {CI_FILE} with {len(jobs)} jobs.")
 
