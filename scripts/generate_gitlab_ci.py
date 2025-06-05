@@ -12,7 +12,7 @@ stages:
 
 .validate_template: &validate_template
   stage: validate
-  image: ghcr.io/hellt/containerlab:latest
+  image: ghcr.io/srl-labs/clab:latest
   tags:
     - containerlab
   script:
