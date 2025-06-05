@@ -15,7 +15,7 @@ for cfg in "$LAB_PATH"/configs/*.conf; do
 done
 
 # Optional: dry-run or inspect topology
-containerlab inspect --topo "$LAB_PATH/topology.yaml" --quiet || {
+containerlab inspect --topo "$LAB_PATH/topology.yaml" || {
   echo "Containerlab inspect failed"; exit 1;
 }
 
