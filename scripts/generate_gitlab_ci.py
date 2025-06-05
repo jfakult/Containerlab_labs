@@ -13,15 +13,17 @@ stages:
 .validate_template: &validate_template
   stage: validate
   image: ghcr.io/hellt/containerlab:latest
+  tags: [containerlab]
   script:
     - ./scripts/validate_lab.sh "$LAB_PATH"
-    
+
 """
 
 CHECK_JOB = """
 check_gitlab_ci:
   stage: validate
   image: python:3.11
+  tags: [containerlab]
   script:
     - pip install --quiet --disable-pip-version-check --no-cache-dir filecmp
     - cp .gitlab-ci.yml .gitlab-ci.yml.generated
