@@ -4,7 +4,8 @@ stages:
 .validate_template: &validate_template
   stage: validate
   image: ghcr.io/hellt/containerlab:latest
-  tags: [containerlab]
+  tags:
+    - containerlab
   script:
     - ./scripts/validate_lab.sh "$LAB_PATH"
 
