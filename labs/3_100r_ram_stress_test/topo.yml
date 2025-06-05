@@ -1,0 +1,706 @@
+
+name: scalability-test
+
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r1.conf:/etc/frr/frr.conf
+    r2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r2.conf:/etc/frr/frr.conf
+    r3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r3.conf:/etc/frr/frr.conf
+    r4:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r4.conf:/etc/frr/frr.conf
+    r5:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r5.conf:/etc/frr/frr.conf
+    r6:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r6.conf:/etc/frr/frr.conf
+    r7:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r7.conf:/etc/frr/frr.conf
+    r8:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r8.conf:/etc/frr/frr.conf
+    r9:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r9.conf:/etc/frr/frr.conf
+    r10:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r10.conf:/etc/frr/frr.conf
+    r11:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r11.conf:/etc/frr/frr.conf
+    r12:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r12.conf:/etc/frr/frr.conf
+    r13:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r13.conf:/etc/frr/frr.conf
+    r14:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r14.conf:/etc/frr/frr.conf
+    r15:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r15.conf:/etc/frr/frr.conf
+    r16:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r16.conf:/etc/frr/frr.conf
+    r17:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r17.conf:/etc/frr/frr.conf
+    r18:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r18.conf:/etc/frr/frr.conf
+    r19:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r19.conf:/etc/frr/frr.conf
+    r20:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r20.conf:/etc/frr/frr.conf
+    r21:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r21.conf:/etc/frr/frr.conf
+    r22:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r22.conf:/etc/frr/frr.conf
+    r23:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r23.conf:/etc/frr/frr.conf
+    r24:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r24.conf:/etc/frr/frr.conf
+    r25:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r25.conf:/etc/frr/frr.conf
+    r26:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r26.conf:/etc/frr/frr.conf
+    r27:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r27.conf:/etc/frr/frr.conf
+    r28:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r28.conf:/etc/frr/frr.conf
+    r29:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r29.conf:/etc/frr/frr.conf
+    r30:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r30.conf:/etc/frr/frr.conf
+    r31:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r31.conf:/etc/frr/frr.conf
+    r32:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r32.conf:/etc/frr/frr.conf
+    r33:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r33.conf:/etc/frr/frr.conf
+    r34:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r34.conf:/etc/frr/frr.conf
+    r35:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r35.conf:/etc/frr/frr.conf
+    r36:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r36.conf:/etc/frr/frr.conf
+    r37:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r37.conf:/etc/frr/frr.conf
+    r38:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r38.conf:/etc/frr/frr.conf
+    r39:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r39.conf:/etc/frr/frr.conf
+    r40:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r40.conf:/etc/frr/frr.conf
+    r41:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r41.conf:/etc/frr/frr.conf
+    r42:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r42.conf:/etc/frr/frr.conf
+    r43:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r43.conf:/etc/frr/frr.conf
+    r44:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r44.conf:/etc/frr/frr.conf
+    r45:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r45.conf:/etc/frr/frr.conf
+    r46:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r46.conf:/etc/frr/frr.conf
+    r47:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r47.conf:/etc/frr/frr.conf
+    r48:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r48.conf:/etc/frr/frr.conf
+    r49:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r49.conf:/etc/frr/frr.conf
+    r50:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r50.conf:/etc/frr/frr.conf
+    r51:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r51.conf:/etc/frr/frr.conf
+    r52:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r52.conf:/etc/frr/frr.conf
+    r53:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r53.conf:/etc/frr/frr.conf
+    r54:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r54.conf:/etc/frr/frr.conf
+    r55:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r55.conf:/etc/frr/frr.conf
+    r56:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r56.conf:/etc/frr/frr.conf
+    r57:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r57.conf:/etc/frr/frr.conf
+    r58:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r58.conf:/etc/frr/frr.conf
+    r59:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r59.conf:/etc/frr/frr.conf
+    r60:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r60.conf:/etc/frr/frr.conf
+    r61:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r61.conf:/etc/frr/frr.conf
+    r62:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r62.conf:/etc/frr/frr.conf
+    r63:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r63.conf:/etc/frr/frr.conf
+    r64:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r64.conf:/etc/frr/frr.conf
+    r65:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r65.conf:/etc/frr/frr.conf
+    r66:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r66.conf:/etc/frr/frr.conf
+    r67:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r67.conf:/etc/frr/frr.conf
+    r68:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r68.conf:/etc/frr/frr.conf
+    r69:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r69.conf:/etc/frr/frr.conf
+    r70:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r70.conf:/etc/frr/frr.conf
+    r71:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r71.conf:/etc/frr/frr.conf
+    r72:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r72.conf:/etc/frr/frr.conf
+    r73:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r73.conf:/etc/frr/frr.conf
+    r74:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r74.conf:/etc/frr/frr.conf
+    r75:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r75.conf:/etc/frr/frr.conf
+    r76:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r76.conf:/etc/frr/frr.conf
+    r77:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r77.conf:/etc/frr/frr.conf
+    r78:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r78.conf:/etc/frr/frr.conf
+    r79:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r79.conf:/etc/frr/frr.conf
+    r80:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r80.conf:/etc/frr/frr.conf
+    r81:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r81.conf:/etc/frr/frr.conf
+    r82:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r82.conf:/etc/frr/frr.conf
+    r83:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r83.conf:/etc/frr/frr.conf
+    r84:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r84.conf:/etc/frr/frr.conf
+    r85:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r85.conf:/etc/frr/frr.conf
+    r86:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r86.conf:/etc/frr/frr.conf
+    r87:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r87.conf:/etc/frr/frr.conf
+    r88:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r88.conf:/etc/frr/frr.conf
+    r89:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r89.conf:/etc/frr/frr.conf
+    r90:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r90.conf:/etc/frr/frr.conf
+    r91:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r91.conf:/etc/frr/frr.conf
+    r92:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r92.conf:/etc/frr/frr.conf
+    r93:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r93.conf:/etc/frr/frr.conf
+    r94:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r94.conf:/etc/frr/frr.conf
+    r95:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r95.conf:/etc/frr/frr.conf
+    r96:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r96.conf:/etc/frr/frr.conf
+    r97:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r97.conf:/etc/frr/frr.conf
+    r98:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r98.conf:/etc/frr/frr.conf
+    r99:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r99.conf:/etc/frr/frr.conf
+    r100:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r100.conf:/etc/frr/frr.conf
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r2:eth1", "r3:eth1"]
+    - endpoints: ["r3:eth1", "r4:eth1"]
+    - endpoints: ["r4:eth1", "r5:eth1"]
+    - endpoints: ["r5:eth1", "r6:eth1"]
+    - endpoints: ["r6:eth1", "r7:eth1"]
+    - endpoints: ["r7:eth1", "r8:eth1"]
+    - endpoints: ["r8:eth1", "r9:eth1"]
+    - endpoints: ["r9:eth1", "r10:eth1"]
+    - endpoints: ["r10:eth1", "r11:eth1"]
+    - endpoints: ["r11:eth1", "r12:eth1"]
+    - endpoints: ["r12:eth1", "r13:eth1"]
+    - endpoints: ["r13:eth1", "r14:eth1"]
+    - endpoints: ["r14:eth1", "r15:eth1"]
+    - endpoints: ["r15:eth1", "r16:eth1"]
+    - endpoints: ["r16:eth1", "r17:eth1"]
+    - endpoints: ["r17:eth1", "r18:eth1"]
+    - endpoints: ["r18:eth1", "r19:eth1"]
+    - endpoints: ["r19:eth1", "r20:eth1"]
+    - endpoints: ["r20:eth1", "r21:eth1"]
+    - endpoints: ["r21:eth1", "r22:eth1"]
+    - endpoints: ["r22:eth1", "r23:eth1"]
+    - endpoints: ["r23:eth1", "r24:eth1"]
+    - endpoints: ["r24:eth1", "r25:eth1"]
+    - endpoints: ["r25:eth1", "r26:eth1"]
+    - endpoints: ["r26:eth1", "r27:eth1"]
+    - endpoints: ["r27:eth1", "r28:eth1"]
+    - endpoints: ["r28:eth1", "r29:eth1"]
+    - endpoints: ["r29:eth1", "r30:eth1"]
+    - endpoints: ["r30:eth1", "r31:eth1"]
+    - endpoints: ["r31:eth1", "r32:eth1"]
+    - endpoints: ["r32:eth1", "r33:eth1"]
+    - endpoints: ["r33:eth1", "r34:eth1"]
+    - endpoints: ["r34:eth1", "r35:eth1"]
+    - endpoints: ["r35:eth1", "r36:eth1"]
+    - endpoints: ["r36:eth1", "r37:eth1"]
+    - endpoints: ["r37:eth1", "r38:eth1"]
+    - endpoints: ["r38:eth1", "r39:eth1"]
+    - endpoints: ["r39:eth1", "r40:eth1"]
+    - endpoints: ["r40:eth1", "r41:eth1"]
+    - endpoints: ["r41:eth1", "r42:eth1"]
+    - endpoints: ["r42:eth1", "r43:eth1"]
+    - endpoints: ["r43:eth1", "r44:eth1"]
+    - endpoints: ["r44:eth1", "r45:eth1"]
+    - endpoints: ["r45:eth1", "r46:eth1"]
+    - endpoints: ["r46:eth1", "r47:eth1"]
+    - endpoints: ["r47:eth1", "r48:eth1"]
+    - endpoints: ["r48:eth1", "r49:eth1"]
+    - endpoints: ["r49:eth1", "r50:eth1"]
+    - endpoints: ["r50:eth1", "r51:eth1"]
+    - endpoints: ["r51:eth1", "r52:eth1"]
+    - endpoints: ["r52:eth1", "r53:eth1"]
+    - endpoints: ["r53:eth1", "r54:eth1"]
+    - endpoints: ["r54:eth1", "r55:eth1"]
+    - endpoints: ["r55:eth1", "r56:eth1"]
+    - endpoints: ["r56:eth1", "r57:eth1"]
+    - endpoints: ["r57:eth1", "r58:eth1"]
+    - endpoints: ["r58:eth1", "r59:eth1"]
+    - endpoints: ["r59:eth1", "r60:eth1"]
+    - endpoints: ["r60:eth1", "r61:eth1"]
+    - endpoints: ["r61:eth1", "r62:eth1"]
+    - endpoints: ["r62:eth1", "r63:eth1"]
+    - endpoints: ["r63:eth1", "r64:eth1"]
+    - endpoints: ["r64:eth1", "r65:eth1"]
+    - endpoints: ["r65:eth1", "r66:eth1"]
+    - endpoints: ["r66:eth1", "r67:eth1"]
+    - endpoints: ["r67:eth1", "r68:eth1"]
+    - endpoints: ["r68:eth1", "r69:eth1"]
+    - endpoints: ["r69:eth1", "r70:eth1"]
+    - endpoints: ["r70:eth1", "r71:eth1"]
+    - endpoints: ["r71:eth1", "r72:eth1"]
+    - endpoints: ["r72:eth1", "r73:eth1"]
+    - endpoints: ["r73:eth1", "r74:eth1"]
+    - endpoints: ["r74:eth1", "r75:eth1"]
+    - endpoints: ["r75:eth1", "r76:eth1"]
+    - endpoints: ["r76:eth1", "r77:eth1"]
+    - endpoints: ["r77:eth1", "r78:eth1"]
+    - endpoints: ["r78:eth1", "r79:eth1"]
+    - endpoints: ["r79:eth1", "r80:eth1"]
+    - endpoints: ["r80:eth1", "r81:eth1"]
+    - endpoints: ["r81:eth1", "r82:eth1"]
+    - endpoints: ["r82:eth1", "r83:eth1"]
+    - endpoints: ["r83:eth1", "r84:eth1"]
+    - endpoints: ["r84:eth1", "r85:eth1"]
+    - endpoints: ["r85:eth1", "r86:eth1"]
+    - endpoints: ["r86:eth1", "r87:eth1"]
+    - endpoints: ["r87:eth1", "r88:eth1"]
+    - endpoints: ["r88:eth1", "r89:eth1"]
+    - endpoints: ["r89:eth1", "r90:eth1"]
+    - endpoints: ["r90:eth1", "r91:eth1"]
+    - endpoints: ["r91:eth1", "r92:eth1"]
+    - endpoints: ["r92:eth1", "r93:eth1"]
+    - endpoints: ["r93:eth1", "r94:eth1"]
+    - endpoints: ["r94:eth1", "r95:eth1"]
+    - endpoints: ["r95:eth1", "r96:eth1"]
+    - endpoints: ["r96:eth1", "r97:eth1"]
+    - endpoints: ["r97:eth1", "r98:eth1"]
+    - endpoints: ["r98:eth1", "r99:eth1"]
+    - endpoints: ["r99:eth1", "r100:eth1"]

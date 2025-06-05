@@ -1,0 +1,33 @@
+stages:
+  - validate
+
+.validate_template: &validate_template
+  stage: validate
+  image: ghcr.io/hellt/containerlab:latest
+  script:
+    - ./scripts/validate_lab.sh "$LAB_PATH"
+    
+validate_2_6r2h_isis_bgp:
+  <<: *validate_template
+  variables:
+    LAB_PATH: labs/2_6r2h_isis_bgp
+  rules:
+    - changes:
+        - labs/2_6r2h_isis_bgp/**
+
+validate_3_100r_ram_stress_test:
+  <<: *validate_template
+  variables:
+    LAB_PATH: labs/3_100r_ram_stress_test
+  rules:
+    - changes:
+        - labs/3_100r_ram_stress_test/**
+
+check_gitlab_ci:
+  stage: validate
+  image: python:3.11
+  script:
+    - pip install --quiet --disable-pip-version-check --no-cache-dir filecmp
+    - cp .gitlab-ci.yml .gitlab-ci.yml.generated
+    - python3 scripts/gen_gitlab_ci.py
+    - diff -u .gitlab-ci.yml .gitlab-ci.yml.generated && echo "CI file is current." || (echo "❌ .gitlab-ci.yml is outdated! Run scripts/gen_gitlab_ci.py"; exit 1)

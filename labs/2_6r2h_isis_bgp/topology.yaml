@@ -1,0 +1,75 @@
+name: 2_6r2h_isis_bgp
+
+prefix: clab
+
+mgmt:
+  network: mgmt
+  ipv4-subnet: 172.20.20.0/24
+
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r1.conf:/etc/frr/frr.conf
+    r2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r2.conf:/etc/frr/frr.conf
+    r3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r3.conf:/etc/frr/frr.conf
+    r4:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r4.conf:/etc/frr/frr.conf
+    r5:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r5.conf:/etc/frr/frr.conf
+    r6:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r6.conf:/etc/frr/frr.conf
+    h1:
+      kind: linux
+      image: alpine:latest
+      binds:
+        - configs/h1.sh:/startup.sh
+      cmd: "/bin/sh /startup.sh"
+    h2:
+      kind: linux
+      image: alpine:latest
+      binds:
+        - configs/h2.sh:/startup.sh
+      cmd: "/bin/sh /startup.sh"
+
+  links:
+    # IS-IS domain A (r1-r2-r3)
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r1:eth2", "r3:eth1"]
+    - endpoints: ["r2:eth2", "r3:eth2"]
+    # IS-IS domain B (r4-r5-r6)
+    - endpoints: ["r4:eth1", "r5:eth1"]
+    - endpoints: ["r4:eth2", "r6:eth1"]
+    - endpoints: ["r5:eth2", "r6:eth2"]
+
+    # EBGP peering between r3 and r4
+    - endpoints: ["r3:eth3", "r4:eth3"]
+
+    # Hosts
+    - endpoints: ["r1:eth3", "h1:eth1"]
+    - endpoints: ["r6:eth3", "h2:eth1"]

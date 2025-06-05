@@ -1,0 +1,4510 @@
+{
+  "name": "scalability-test",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-cd636f55658f",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGBS13+Ucjx3gMOe2hJ0aDLL6ZdT3U17wkuNImYwjCU6"],
+  "nodes": {
+    "r1": {
+      "index": "0",
+      "shortname": "r1",
+      "longname": "clab-scalability-test-r1",
+      "fqdn": "r1.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r1",
+        "clab-node-longname": "clab-scalability-test-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r10": {
+      "index": "1",
+      "shortname": "r10",
+      "longname": "clab-scalability-test-r10",
+      "fqdn": "r10.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r10",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.42",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r10",
+        "clab-node-longname": "clab-scalability-test-r10",
+        "clab-node-name": "r10",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r100": {
+      "index": "2",
+      "shortname": "r100",
+      "longname": "clab-scalability-test-r100",
+      "fqdn": "r100.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r100",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.72",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::48",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r100",
+        "clab-node-longname": "clab-scalability-test-r100",
+        "clab-node-name": "r100",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r11": {
+      "index": "3",
+      "shortname": "r11",
+      "longname": "clab-scalability-test-r11",
+      "fqdn": "r11.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r11",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.54",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::36",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r11",
+        "clab-node-longname": "clab-scalability-test-r11",
+        "clab-node-name": "r11",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r12": {
+      "index": "4",
+      "shortname": "r12",
+      "longname": "clab-scalability-test-r12",
+      "fqdn": "r12.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r12",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.82",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::52",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r12",
+        "clab-node-longname": "clab-scalability-test-r12",
+        "clab-node-name": "r12",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r13": {
+      "index": "5",
+      "shortname": "r13",
+      "longname": "clab-scalability-test-r13",
+      "fqdn": "r13.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r13",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.78",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r13",
+        "clab-node-longname": "clab-scalability-test-r13",
+        "clab-node-name": "r13",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r14": {
+      "index": "6",
+      "shortname": "r14",
+      "longname": "clab-scalability-test-r14",
+      "fqdn": "r14.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r14",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.41",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::29",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r14",
+        "clab-node-longname": "clab-scalability-test-r14",
+        "clab-node-name": "r14",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r15": {
+      "index": "7",
+      "shortname": "r15",
+      "longname": "clab-scalability-test-r15",
+      "fqdn": "r15.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r15",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.91",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r15",
+        "clab-node-longname": "clab-scalability-test-r15",
+        "clab-node-name": "r15",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r16": {
+      "index": "8",
+      "shortname": "r16",
+      "longname": "clab-scalability-test-r16",
+      "fqdn": "r16.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r16",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.56",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::38",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r16",
+        "clab-node-longname": "clab-scalability-test-r16",
+        "clab-node-name": "r16",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r17": {
+      "index": "9",
+      "shortname": "r17",
+      "longname": "clab-scalability-test-r17",
+      "fqdn": "r17.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r17",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.35",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::23",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r17",
+        "clab-node-longname": "clab-scalability-test-r17",
+        "clab-node-name": "r17",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r18": {
+      "index": "10",
+      "shortname": "r18",
+      "longname": "clab-scalability-test-r18",
+      "fqdn": "r18.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r18",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.73",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::49",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r18",
+        "clab-node-longname": "clab-scalability-test-r18",
+        "clab-node-name": "r18",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r19": {
+      "index": "11",
+      "shortname": "r19",
+      "longname": "clab-scalability-test-r19",
+      "fqdn": "r19.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r19",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.88",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::58",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r19",
+        "clab-node-longname": "clab-scalability-test-r19",
+        "clab-node-name": "r19",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r2": {
+      "index": "12",
+      "shortname": "r2",
+      "longname": "clab-scalability-test-r2",
+      "fqdn": "r2.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.31",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r2",
+        "clab-node-longname": "clab-scalability-test-r2",
+        "clab-node-name": "r2",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r20": {
+      "index": "13",
+      "shortname": "r20",
+      "longname": "clab-scalability-test-r20",
+      "fqdn": "r20.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r20",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.38",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::26",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r20",
+        "clab-node-longname": "clab-scalability-test-r20",
+        "clab-node-name": "r20",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r21": {
+      "index": "14",
+      "shortname": "r21",
+      "longname": "clab-scalability-test-r21",
+      "fqdn": "r21.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r21",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.76",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r21",
+        "clab-node-longname": "clab-scalability-test-r21",
+        "clab-node-name": "r21",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r22": {
+      "index": "15",
+      "shortname": "r22",
+      "longname": "clab-scalability-test-r22",
+      "fqdn": "r22.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r22",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.50",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::32",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r22",
+        "clab-node-longname": "clab-scalability-test-r22",
+        "clab-node-name": "r22",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r23": {
+      "index": "16",
+      "shortname": "r23",
+      "longname": "clab-scalability-test-r23",
+      "fqdn": "r23.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r23",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.55",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::37",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r23",
+        "clab-node-longname": "clab-scalability-test-r23",
+        "clab-node-name": "r23",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r24": {
+      "index": "17",
+      "shortname": "r24",
+      "longname": "clab-scalability-test-r24",
+      "fqdn": "r24.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r24",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.84",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::54",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r24",
+        "clab-node-longname": "clab-scalability-test-r24",
+        "clab-node-name": "r24",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r25": {
+      "index": "18",
+      "shortname": "r25",
+      "longname": "clab-scalability-test-r25",
+      "fqdn": "r25.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r25",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::65",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r25",
+        "clab-node-longname": "clab-scalability-test-r25",
+        "clab-node-name": "r25",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r26": {
+      "index": "19",
+      "shortname": "r26",
+      "longname": "clab-scalability-test-r26",
+      "fqdn": "r26.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r26",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.95",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r26",
+        "clab-node-longname": "clab-scalability-test-r26",
+        "clab-node-name": "r26",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r27": {
+      "index": "20",
+      "shortname": "r27",
+      "longname": "clab-scalability-test-r27",
+      "fqdn": "r27.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r27",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.69",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::45",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r27",
+        "clab-node-longname": "clab-scalability-test-r27",
+        "clab-node-name": "r27",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r28": {
+      "index": "21",
+      "shortname": "r28",
+      "longname": "clab-scalability-test-r28",
+      "fqdn": "r28.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r28",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.30",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r28",
+        "clab-node-longname": "clab-scalability-test-r28",
+        "clab-node-name": "r28",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r29": {
+      "index": "22",
+      "shortname": "r29",
+      "longname": "clab-scalability-test-r29",
+      "fqdn": "r29.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r29",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.39",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::27",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r29",
+        "clab-node-longname": "clab-scalability-test-r29",
+        "clab-node-name": "r29",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r3": {
+      "index": "23",
+      "shortname": "r3",
+      "longname": "clab-scalability-test-r3",
+      "fqdn": "r3.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r3",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.80",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::50",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r3",
+        "clab-node-longname": "clab-scalability-test-r3",
+        "clab-node-name": "r3",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r30": {
+      "index": "24",
+      "shortname": "r30",
+      "longname": "clab-scalability-test-r30",
+      "fqdn": "r30.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r30",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.93",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r30",
+        "clab-node-longname": "clab-scalability-test-r30",
+        "clab-node-name": "r30",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r31": {
+      "index": "25",
+      "shortname": "r31",
+      "longname": "clab-scalability-test-r31",
+      "fqdn": "r31.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r31",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.90",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r31",
+        "clab-node-longname": "clab-scalability-test-r31",
+        "clab-node-name": "r31",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r32": {
+      "index": "26",
+      "shortname": "r32",
+      "longname": "clab-scalability-test-r32",
+      "fqdn": "r32.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r32",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::17",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r32",
+        "clab-node-longname": "clab-scalability-test-r32",
+        "clab-node-name": "r32",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r33": {
+      "index": "27",
+      "shortname": "r33",
+      "longname": "clab-scalability-test-r33",
+      "fqdn": "r33.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r33",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r33",
+        "clab-node-longname": "clab-scalability-test-r33",
+        "clab-node-name": "r33",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r34": {
+      "index": "28",
+      "shortname": "r34",
+      "longname": "clab-scalability-test-r34",
+      "fqdn": "r34.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r34",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.18",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::12",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r34",
+        "clab-node-longname": "clab-scalability-test-r34",
+        "clab-node-name": "r34",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r35": {
+      "index": "29",
+      "shortname": "r35",
+      "longname": "clab-scalability-test-r35",
+      "fqdn": "r35.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r35",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.60",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r35",
+        "clab-node-longname": "clab-scalability-test-r35",
+        "clab-node-name": "r35",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r36": {
+      "index": "30",
+      "shortname": "r36",
+      "longname": "clab-scalability-test-r36",
+      "fqdn": "r36.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r36",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.89",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::59",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r36",
+        "clab-node-longname": "clab-scalability-test-r36",
+        "clab-node-name": "r36",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r37": {
+      "index": "31",
+      "shortname": "r37",
+      "longname": "clab-scalability-test-r37",
+      "fqdn": "r37.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r37",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.19",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::13",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r37",
+        "clab-node-longname": "clab-scalability-test-r37",
+        "clab-node-name": "r37",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r38": {
+      "index": "32",
+      "shortname": "r38",
+      "longname": "clab-scalability-test-r38",
+      "fqdn": "r38.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r38",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.24",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::18",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r38",
+        "clab-node-longname": "clab-scalability-test-r38",
+        "clab-node-name": "r38",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r39": {
+      "index": "33",
+      "shortname": "r39",
+      "longname": "clab-scalability-test-r39",
+      "fqdn": "r39.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r39",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.97",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::61",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r39",
+        "clab-node-longname": "clab-scalability-test-r39",
+        "clab-node-name": "r39",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r4": {
+      "index": "34",
+      "shortname": "r4",
+      "longname": "clab-scalability-test-r4",
+      "fqdn": "r4.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r4",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r4",
+        "clab-node-longname": "clab-scalability-test-r4",
+        "clab-node-name": "r4",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r40": {
+      "index": "35",
+      "shortname": "r40",
+      "longname": "clab-scalability-test-r40",
+      "fqdn": "r40.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r40",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::10",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r40",
+        "clab-node-longname": "clab-scalability-test-r40",
+        "clab-node-name": "r40",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r41": {
+      "index": "36",
+      "shortname": "r41",
+      "longname": "clab-scalability-test-r41",
+      "fqdn": "r41.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r41",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.83",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::53",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r41",
+        "clab-node-longname": "clab-scalability-test-r41",
+        "clab-node-name": "r41",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r42": {
+      "index": "37",
+      "shortname": "r42",
+      "longname": "clab-scalability-test-r42",
+      "fqdn": "r42.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r42",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.94",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r42",
+        "clab-node-longname": "clab-scalability-test-r42",
+        "clab-node-name": "r42",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r43": {
+      "index": "38",
+      "shortname": "r43",
+      "longname": "clab-scalability-test-r43",
+      "fqdn": "r43.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r43",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.61",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r43",
+        "clab-node-longname": "clab-scalability-test-r43",
+        "clab-node-name": "r43",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r44": {
+      "index": "39",
+      "shortname": "r44",
+      "longname": "clab-scalability-test-r44",
+      "fqdn": "r44.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r44",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.65",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::41",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r44",
+        "clab-node-longname": "clab-scalability-test-r44",
+        "clab-node-name": "r44",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r45": {
+      "index": "40",
+      "shortname": "r45",
+      "longname": "clab-scalability-test-r45",
+      "fqdn": "r45.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r45",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r45",
+        "clab-node-longname": "clab-scalability-test-r45",
+        "clab-node-name": "r45",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r46": {
+      "index": "41",
+      "shortname": "r46",
+      "longname": "clab-scalability-test-r46",
+      "fqdn": "r46.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r46",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.99",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::63",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r46",
+        "clab-node-longname": "clab-scalability-test-r46",
+        "clab-node-name": "r46",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r47": {
+      "index": "42",
+      "shortname": "r47",
+      "longname": "clab-scalability-test-r47",
+      "fqdn": "r47.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r47",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.43",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r47",
+        "clab-node-longname": "clab-scalability-test-r47",
+        "clab-node-name": "r47",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r48": {
+      "index": "43",
+      "shortname": "r48",
+      "longname": "clab-scalability-test-r48",
+      "fqdn": "r48.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r48",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.40",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::28",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r48",
+        "clab-node-longname": "clab-scalability-test-r48",
+        "clab-node-name": "r48",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r49": {
+      "index": "44",
+      "shortname": "r49",
+      "longname": "clab-scalability-test-r49",
+      "fqdn": "r49.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r49",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.81",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::51",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r49",
+        "clab-node-longname": "clab-scalability-test-r49",
+        "clab-node-name": "r49",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r5": {
+      "index": "45",
+      "shortname": "r5",
+      "longname": "clab-scalability-test-r5",
+      "fqdn": "r5.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r5",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r5",
+        "clab-node-longname": "clab-scalability-test-r5",
+        "clab-node-name": "r5",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r50": {
+      "index": "46",
+      "shortname": "r50",
+      "longname": "clab-scalability-test-r50",
+      "fqdn": "r50.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r50",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.21",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::15",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r50",
+        "clab-node-longname": "clab-scalability-test-r50",
+        "clab-node-name": "r50",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r51": {
+      "index": "47",
+      "shortname": "r51",
+      "longname": "clab-scalability-test-r51",
+      "fqdn": "r51.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r51",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.20",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::14",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r51",
+        "clab-node-longname": "clab-scalability-test-r51",
+        "clab-node-name": "r51",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r52": {
+      "index": "48",
+      "shortname": "r52",
+      "longname": "clab-scalability-test-r52",
+      "fqdn": "r52.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r52",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.70",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::46",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r52",
+        "clab-node-longname": "clab-scalability-test-r52",
+        "clab-node-name": "r52",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r53": {
+      "index": "49",
+      "shortname": "r53",
+      "longname": "clab-scalability-test-r53",
+      "fqdn": "r53.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r53",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.77",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r53",
+        "clab-node-longname": "clab-scalability-test-r53",
+        "clab-node-name": "r53",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r54": {
+      "index": "50",
+      "shortname": "r54",
+      "longname": "clab-scalability-test-r54",
+      "fqdn": "r54.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r54",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.59",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r54",
+        "clab-node-longname": "clab-scalability-test-r54",
+        "clab-node-name": "r54",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r55": {
+      "index": "51",
+      "shortname": "r55",
+      "longname": "clab-scalability-test-r55",
+      "fqdn": "r55.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r55",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.75",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r55",
+        "clab-node-longname": "clab-scalability-test-r55",
+        "clab-node-name": "r55",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r56": {
+      "index": "52",
+      "shortname": "r56",
+      "longname": "clab-scalability-test-r56",
+      "fqdn": "r56.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r56",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.49",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::31",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r56",
+        "clab-node-longname": "clab-scalability-test-r56",
+        "clab-node-name": "r56",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r57": {
+      "index": "53",
+      "shortname": "r57",
+      "longname": "clab-scalability-test-r57",
+      "fqdn": "r57.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r57",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.33",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::21",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r57",
+        "clab-node-longname": "clab-scalability-test-r57",
+        "clab-node-name": "r57",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r58": {
+      "index": "54",
+      "shortname": "r58",
+      "longname": "clab-scalability-test-r58",
+      "fqdn": "r58.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r58",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.98",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::62",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r58",
+        "clab-node-longname": "clab-scalability-test-r58",
+        "clab-node-name": "r58",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r59": {
+      "index": "55",
+      "shortname": "r59",
+      "longname": "clab-scalability-test-r59",
+      "fqdn": "r59.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r59",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.51",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::33",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r59",
+        "clab-node-longname": "clab-scalability-test-r59",
+        "clab-node-name": "r59",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r6": {
+      "index": "56",
+      "shortname": "r6",
+      "longname": "clab-scalability-test-r6",
+      "fqdn": "r6.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r6",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r6",
+        "clab-node-longname": "clab-scalability-test-r6",
+        "clab-node-name": "r6",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r60": {
+      "index": "57",
+      "shortname": "r60",
+      "longname": "clab-scalability-test-r60",
+      "fqdn": "r60.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r60",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r60",
+        "clab-node-longname": "clab-scalability-test-r60",
+        "clab-node-name": "r60",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r61": {
+      "index": "58",
+      "shortname": "r61",
+      "longname": "clab-scalability-test-r61",
+      "fqdn": "r61.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r61",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.96",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::60",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r61",
+        "clab-node-longname": "clab-scalability-test-r61",
+        "clab-node-name": "r61",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r62": {
+      "index": "59",
+      "shortname": "r62",
+      "longname": "clab-scalability-test-r62",
+      "fqdn": "r62.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r62",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.22",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::16",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r62",
+        "clab-node-longname": "clab-scalability-test-r62",
+        "clab-node-name": "r62",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r63": {
+      "index": "60",
+      "shortname": "r63",
+      "longname": "clab-scalability-test-r63",
+      "fqdn": "r63.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r63",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r63",
+        "clab-node-longname": "clab-scalability-test-r63",
+        "clab-node-name": "r63",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r64": {
+      "index": "61",
+      "shortname": "r64",
+      "longname": "clab-scalability-test-r64",
+      "fqdn": "r64.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r64",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r64",
+        "clab-node-longname": "clab-scalability-test-r64",
+        "clab-node-name": "r64",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r65": {
+      "index": "62",
+      "shortname": "r65",
+      "longname": "clab-scalability-test-r65",
+      "fqdn": "r65.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r65",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.67",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::43",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r65",
+        "clab-node-longname": "clab-scalability-test-r65",
+        "clab-node-name": "r65",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r66": {
+      "index": "63",
+      "shortname": "r66",
+      "longname": "clab-scalability-test-r66",
+      "fqdn": "r66.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r66",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.100",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::64",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r66",
+        "clab-node-longname": "clab-scalability-test-r66",
+        "clab-node-name": "r66",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r67": {
+      "index": "64",
+      "shortname": "r67",
+      "longname": "clab-scalability-test-r67",
+      "fqdn": "r67.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r67",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.48",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::30",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r67",
+        "clab-node-longname": "clab-scalability-test-r67",
+        "clab-node-name": "r67",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r68": {
+      "index": "65",
+      "shortname": "r68",
+      "longname": "clab-scalability-test-r68",
+      "fqdn": "r68.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r68",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.26",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r68",
+        "clab-node-longname": "clab-scalability-test-r68",
+        "clab-node-name": "r68",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r69": {
+      "index": "66",
+      "shortname": "r69",
+      "longname": "clab-scalability-test-r69",
+      "fqdn": "r69.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r69",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.37",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::25",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r69",
+        "clab-node-longname": "clab-scalability-test-r69",
+        "clab-node-name": "r69",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r7": {
+      "index": "67",
+      "shortname": "r7",
+      "longname": "clab-scalability-test-r7",
+      "fqdn": "r7.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r7",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r7",
+        "clab-node-longname": "clab-scalability-test-r7",
+        "clab-node-name": "r7",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r70": {
+      "index": "68",
+      "shortname": "r70",
+      "longname": "clab-scalability-test-r70",
+      "fqdn": "r70.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r70",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.36",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::24",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r70",
+        "clab-node-longname": "clab-scalability-test-r70",
+        "clab-node-name": "r70",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r71": {
+      "index": "69",
+      "shortname": "r71",
+      "longname": "clab-scalability-test-r71",
+      "fqdn": "r71.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r71",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.58",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r71",
+        "clab-node-longname": "clab-scalability-test-r71",
+        "clab-node-name": "r71",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r72": {
+      "index": "70",
+      "shortname": "r72",
+      "longname": "clab-scalability-test-r72",
+      "fqdn": "r72.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r72",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.87",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::57",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r72",
+        "clab-node-longname": "clab-scalability-test-r72",
+        "clab-node-name": "r72",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r73": {
+      "index": "71",
+      "shortname": "r73",
+      "longname": "clab-scalability-test-r73",
+      "fqdn": "r73.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r73",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.29",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r73",
+        "clab-node-longname": "clab-scalability-test-r73",
+        "clab-node-name": "r73",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r74": {
+      "index": "72",
+      "shortname": "r74",
+      "longname": "clab-scalability-test-r74",
+      "fqdn": "r74.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r74",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r74",
+        "clab-node-longname": "clab-scalability-test-r74",
+        "clab-node-name": "r74",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r75": {
+      "index": "73",
+      "shortname": "r75",
+      "longname": "clab-scalability-test-r75",
+      "fqdn": "r75.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r75",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.47",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r75",
+        "clab-node-longname": "clab-scalability-test-r75",
+        "clab-node-name": "r75",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r76": {
+      "index": "74",
+      "shortname": "r76",
+      "longname": "clab-scalability-test-r76",
+      "fqdn": "r76.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r76",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.63",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r76",
+        "clab-node-longname": "clab-scalability-test-r76",
+        "clab-node-name": "r76",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r77": {
+      "index": "75",
+      "shortname": "r77",
+      "longname": "clab-scalability-test-r77",
+      "fqdn": "r77.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r77",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.71",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::47",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r77",
+        "clab-node-longname": "clab-scalability-test-r77",
+        "clab-node-name": "r77",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r78": {
+      "index": "76",
+      "shortname": "r78",
+      "longname": "clab-scalability-test-r78",
+      "fqdn": "r78.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r78",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r78",
+        "clab-node-longname": "clab-scalability-test-r78",
+        "clab-node-name": "r78",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r79": {
+      "index": "77",
+      "shortname": "r79",
+      "longname": "clab-scalability-test-r79",
+      "fqdn": "r79.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r79",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r79",
+        "clab-node-longname": "clab-scalability-test-r79",
+        "clab-node-name": "r79",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r8": {
+      "index": "78",
+      "shortname": "r8",
+      "longname": "clab-scalability-test-r8",
+      "fqdn": "r8.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r8",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.86",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::56",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r8",
+        "clab-node-longname": "clab-scalability-test-r8",
+        "clab-node-name": "r8",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r80": {
+      "index": "79",
+      "shortname": "r80",
+      "longname": "clab-scalability-test-r80",
+      "fqdn": "r80.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r80",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.79",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r80",
+        "clab-node-longname": "clab-scalability-test-r80",
+        "clab-node-name": "r80",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r81": {
+      "index": "80",
+      "shortname": "r81",
+      "longname": "clab-scalability-test-r81",
+      "fqdn": "r81.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r81",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r81",
+        "clab-node-longname": "clab-scalability-test-r81",
+        "clab-node-name": "r81",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r82": {
+      "index": "81",
+      "shortname": "r82",
+      "longname": "clab-scalability-test-r82",
+      "fqdn": "r82.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r82",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.64",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::40",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r82",
+        "clab-node-longname": "clab-scalability-test-r82",
+        "clab-node-name": "r82",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r83": {
+      "index": "82",
+      "shortname": "r83",
+      "longname": "clab-scalability-test-r83",
+      "fqdn": "r83.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r83",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.74",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r83",
+        "clab-node-longname": "clab-scalability-test-r83",
+        "clab-node-name": "r83",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r84": {
+      "index": "83",
+      "shortname": "r84",
+      "longname": "clab-scalability-test-r84",
+      "fqdn": "r84.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r84",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.52",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::34",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r84",
+        "clab-node-longname": "clab-scalability-test-r84",
+        "clab-node-name": "r84",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r85": {
+      "index": "84",
+      "shortname": "r85",
+      "longname": "clab-scalability-test-r85",
+      "fqdn": "r85.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r85",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.66",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::42",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r85",
+        "clab-node-longname": "clab-scalability-test-r85",
+        "clab-node-name": "r85",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r86": {
+      "index": "85",
+      "shortname": "r86",
+      "longname": "clab-scalability-test-r86",
+      "fqdn": "r86.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r86",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.57",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::39",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r86",
+        "clab-node-longname": "clab-scalability-test-r86",
+        "clab-node-name": "r86",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r87": {
+      "index": "86",
+      "shortname": "r87",
+      "longname": "clab-scalability-test-r87",
+      "fqdn": "r87.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r87",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.34",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::22",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r87",
+        "clab-node-longname": "clab-scalability-test-r87",
+        "clab-node-name": "r87",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r88": {
+      "index": "87",
+      "shortname": "r88",
+      "longname": "clab-scalability-test-r88",
+      "fqdn": "r88.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r88",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.25",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::19",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r88",
+        "clab-node-longname": "clab-scalability-test-r88",
+        "clab-node-name": "r88",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r89": {
+      "index": "88",
+      "shortname": "r89",
+      "longname": "clab-scalability-test-r89",
+      "fqdn": "r89.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r89",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.68",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::44",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r89",
+        "clab-node-longname": "clab-scalability-test-r89",
+        "clab-node-name": "r89",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r9": {
+      "index": "89",
+      "shortname": "r9",
+      "longname": "clab-scalability-test-r9",
+      "fqdn": "r9.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r9",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.44",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r9",
+        "clab-node-longname": "clab-scalability-test-r9",
+        "clab-node-name": "r9",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r90": {
+      "index": "90",
+      "shortname": "r90",
+      "longname": "clab-scalability-test-r90",
+      "fqdn": "r90.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r90",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.53",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::35",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r90",
+        "clab-node-longname": "clab-scalability-test-r90",
+        "clab-node-name": "r90",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r91": {
+      "index": "91",
+      "shortname": "r91",
+      "longname": "clab-scalability-test-r91",
+      "fqdn": "r91.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r91",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.32",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::20",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r91",
+        "clab-node-longname": "clab-scalability-test-r91",
+        "clab-node-name": "r91",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r92": {
+      "index": "92",
+      "shortname": "r92",
+      "longname": "clab-scalability-test-r92",
+      "fqdn": "r92.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r92",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.27",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r92",
+        "clab-node-longname": "clab-scalability-test-r92",
+        "clab-node-name": "r92",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r93": {
+      "index": "93",
+      "shortname": "r93",
+      "longname": "clab-scalability-test-r93",
+      "fqdn": "r93.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r93",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.85",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::55",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r93",
+        "clab-node-longname": "clab-scalability-test-r93",
+        "clab-node-name": "r93",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r94": {
+      "index": "94",
+      "shortname": "r94",
+      "longname": "clab-scalability-test-r94",
+      "fqdn": "r94.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r94",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.46",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r94",
+        "clab-node-longname": "clab-scalability-test-r94",
+        "clab-node-name": "r94",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r95": {
+      "index": "95",
+      "shortname": "r95",
+      "longname": "clab-scalability-test-r95",
+      "fqdn": "r95.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r95",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.62",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r95",
+        "clab-node-longname": "clab-scalability-test-r95",
+        "clab-node-name": "r95",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r96": {
+      "index": "96",
+      "shortname": "r96",
+      "longname": "clab-scalability-test-r96",
+      "fqdn": "r96.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r96",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.92",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r96",
+        "clab-node-longname": "clab-scalability-test-r96",
+        "clab-node-name": "r96",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r97": {
+      "index": "97",
+      "shortname": "r97",
+      "longname": "clab-scalability-test-r97",
+      "fqdn": "r97.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r97",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.28",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::1c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r97",
+        "clab-node-longname": "clab-scalability-test-r97",
+        "clab-node-name": "r97",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r98": {
+      "index": "98",
+      "shortname": "r98",
+      "longname": "clab-scalability-test-r98",
+      "fqdn": "r98.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r98",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.45",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r98",
+        "clab-node-longname": "clab-scalability-test-r98",
+        "clab-node-name": "r98",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r99": {
+      "index": "99",
+      "shortname": "r99",
+      "longname": "clab-scalability-test-r99",
+      "fqdn": "r99.scalability-test.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r99",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-cd636f55658f",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/clab-scalability-test/r99",
+        "clab-node-longname": "clab-scalability-test-r99",
+        "clab-node-name": "r99",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/3_100r_ram_stress_test/topology.yaml",
+        "containerlab": "scalability-test"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "r1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c0:53:54",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:70:39:d0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:60:54:e4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fe:4a:f2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:42:17:1e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:dc:e3:3b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e2:ff:64",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r5",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8f:a5:56",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r5",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:2c:6c:8b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r6",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e8:05:c9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r6",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:7d:d2:de",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r7",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:61:ec:d3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r7",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:3c:36:40",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r8",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b7:ce:63",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r8",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9d:0f:15",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r9",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9f:14:e1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r9",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c3:e5:26",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r10",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f6:eb:a1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r10",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e0:38:eb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r11",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ba:30:7a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r11",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:74:eb:9b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r12",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d7:97:32",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r12",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ad:68:a9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r13",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:5e:93:fb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r13",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:78:67:09",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r14",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:65:3b:02",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r14",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b5:40:05",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r15",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:4a:7c:87",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r15",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:39:98:9a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r16",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cb:18:4f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r16",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a0:18:40",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r17",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cf:b2:82",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r17",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4a:85:ce",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r18",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:00:e2:57",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r18",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:7d:fd:68",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r19",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:61:70:2b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r19",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d0:2b:a5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r20",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8d:d8:10",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r20",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0a:27:de",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r21",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:00:54:4f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r21",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ca:49:94",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r22",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:c6:11:f0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r22",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4f:07:b8",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r23",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:10:7c:2e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r23",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c7:cd:b2",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r24",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9d:6a:2a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r24",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:33:83:67",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r25",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:aa:79:af",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r25",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:35:ad:65",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r26",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:aa:37:29",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r26",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b4:a4:16",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r27",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:e8:15",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r27",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d7:12:22",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r28",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d3:6a:e2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r28",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5e:24:3b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r29",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:14:29:68",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r29",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:36:ab:d8",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r30",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b3:4b:10",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r30",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d7:3d:be",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r31",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8a:8b:d9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r31",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9a:ca:81",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r32",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:50:64:05",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r32",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:37:65:25",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r33",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:43:aa:8e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r33",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c1:f1:7b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r34",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:71:53:78",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r34",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:24:0d:49",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r35",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:3a:be:74",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r35",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b5:70:16",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r36",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fa:8a:0c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r36",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e8:e8:32",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r37",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a3:cd:7b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r37",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a0:9a:32",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r38",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:94:8f:0d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r38",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0b:d9:cf",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r39",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:da:b7:47",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r39",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f6:87:28",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r40",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9a:54:b0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r40",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:7b:f7:c0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r41",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:09:d2:1e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r41",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9c:18:eb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r42",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:47:3d:7f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r42",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f0:e5:1a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r43",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:1d:4b:34",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r43",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b4:84:99",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r44",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:47:71:2e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r44",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:57:48:b2",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r45",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:15:55:eb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r45",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:69:5d:fe",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r46",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:30:04:d5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r46",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b3:c4:cb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r47",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:64:e7:27",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r47",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8b:bc:ac",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r48",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e3:4d:a2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r48",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5b:dd:11",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r49",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0d:ff:0b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r49",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:0a:67:3d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r50",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:4d:c4:7c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r50",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:67:bc:74",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r51",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cc:0e:e0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r51",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b0:88:9f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r52",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b1:53:07",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r52",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:74:90:c5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r53",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f8:be:0a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r53",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:80:4d:f5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r54",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:06:49:92",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r54",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:56:58:cf",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r55",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:de:75:5d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r55",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:cd:d4:b5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r56",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:65:ca:87",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r56",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a0:98:78",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r57",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0b:d2:ff",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r57",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:98:d6:96",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r58",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fe:7c:e4",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r58",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:46:a0:97",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r59",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:97:78:61",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r59",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:39:35:c1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r60",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:47:91:4e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r60",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ef:95:d5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r61",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:81:d1:ec",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r61",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4b:db:89",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r62",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:2b:24:f3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r62",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f8:a4:d3",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r63",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:07:8b:63",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r63",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:05:e1:b5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r64",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:13:04:05",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r64",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8a:21:10",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r65",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:91:0c:83",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r65",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f1:ba:2d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r66",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:af:de:63",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r66",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:2c:a6:92",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r67",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0b:62:36",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r67",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:10:7d:9a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r68",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:1a:c2:79",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r68",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e0:ed:ce",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r69",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bc:3e:92",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r69",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:73:b5:4d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r70",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:1d:70:bc",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r70",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:57:40:a0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r71",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9a:bf:c8",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r71",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:37:88:25",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r72",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9d:02:ed",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r72",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:da:c9:1f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r73",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:c8:8e:10",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r73",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:26:23:40",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r74",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e2:32:c0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r74",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:74:fc:60",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r75",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:31:cc:15",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r75",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:1c:53:10",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r76",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:61:6f:17",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r76",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d6:dd:f1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r77",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8b:aa:3a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r77",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d1:ba:41",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r78",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9f:d2:c3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r78",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8a:82:79",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r79",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f3:d1:90",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r79",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8c:b6:0b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r80",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9a:ba:f5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r80",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:33:f4:23",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r81",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d8:35:22",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r81",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:49:81:60",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r82",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:1b:90:60",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r82",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e0:90:d0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r83",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ea:8f:a2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r83",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:91:3c:71",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r84",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fb:97:5a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r84",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b5:5b:9e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r85",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bf:f4:86",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r85",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:97:58:5f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r86",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:6f:6d:fd",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r86",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c8:71:52",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r87",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b6:f9:b4",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r87",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d2:b2:e1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r88",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:83:72:13",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r88",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:81:78:58",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r89",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9b:db:1e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r89",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d7:37:36",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r90",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0a:63:3d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r90",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c9:67:ac",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r91",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:13:8b:3f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r91",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f5:73:d1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r92",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8e:88:fe",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r92",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:6f:ab:10",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r93",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b3:09:e3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r93",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e4:5b:f7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r94",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:db:a1:ae",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r94",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f7:66:1a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r95",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:43:d2:f3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r95",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ee:4e:ed",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r96",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:f2:f3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r96",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:79:44:35",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r97",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:5e:98:0f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r97",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:66:6a:fc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r98",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:50:89:1c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r98",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c9:ab:a0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r99",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:09:ca:b5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r99",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9f:1a:fb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r100",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ba:b8:b7",
+        "peer": "a"
+      }
+    }
+  ]
+}

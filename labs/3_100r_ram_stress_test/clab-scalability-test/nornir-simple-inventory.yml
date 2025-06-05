@@ -1,0 +1,501 @@
+---
+r1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.13
+r10:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.42
+r100:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.72
+r11:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.54
+r12:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.82
+r13:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.78
+r14:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.41
+r15:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.91
+r16:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.56
+r17:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.35
+r18:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.73
+r19:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.88
+r2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.31
+r20:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.38
+r21:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.76
+r22:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.50
+r23:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.55
+r24:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.84
+r25:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.101
+r26:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.95
+r27:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.69
+r28:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.30
+r29:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.39
+r3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.80
+r30:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.93
+r31:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.90
+r32:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.23
+r33:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.8
+r34:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.18
+r35:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.60
+r36:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.89
+r37:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.19
+r38:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.24
+r39:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.97
+r4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+r40:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.16
+r41:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.83
+r42:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.94
+r43:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.61
+r44:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.65
+r45:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.11
+r46:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.99
+r47:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.43
+r48:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.40
+r49:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.81
+r5:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.15
+r50:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.21
+r51:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.20
+r52:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.70
+r53:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.77
+r54:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.59
+r55:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.75
+r56:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.49
+r57:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.33
+r58:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.98
+r59:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.51
+r6:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+r60:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.12
+r61:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.96
+r62:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.22
+r63:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+r64:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.14
+r65:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.67
+r66:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.100
+r67:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.48
+r68:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.26
+r69:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.37
+r7:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.9
+r70:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.36
+r71:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.58
+r72:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.87
+r73:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.29
+r74:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.10
+r75:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.47
+r76:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.63
+r77:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.71
+r78:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+r79:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.17
+r8:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.86
+r80:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.79
+r81:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2
+r82:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.64
+r83:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.74
+r84:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.52
+r85:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.66
+r86:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.57
+r87:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.34
+r88:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.25
+r89:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.68
+r9:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.44
+r90:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.53
+r91:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.32
+r92:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.27
+r93:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.85
+r94:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.46
+r95:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.62
+r96:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.92
+r97:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.28
+r98:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.45
+r99:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7

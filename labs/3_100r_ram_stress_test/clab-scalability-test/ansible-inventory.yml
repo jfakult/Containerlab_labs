@@ -1,0 +1,209 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        clab-scalability-test-r1:
+          ansible_host: 172.20.20.13
+        clab-scalability-test-r10:
+          ansible_host: 172.20.20.42
+        clab-scalability-test-r100:
+          ansible_host: 172.20.20.72
+        clab-scalability-test-r11:
+          ansible_host: 172.20.20.54
+        clab-scalability-test-r12:
+          ansible_host: 172.20.20.82
+        clab-scalability-test-r13:
+          ansible_host: 172.20.20.78
+        clab-scalability-test-r14:
+          ansible_host: 172.20.20.41
+        clab-scalability-test-r15:
+          ansible_host: 172.20.20.91
+        clab-scalability-test-r16:
+          ansible_host: 172.20.20.56
+        clab-scalability-test-r17:
+          ansible_host: 172.20.20.35
+        clab-scalability-test-r18:
+          ansible_host: 172.20.20.73
+        clab-scalability-test-r19:
+          ansible_host: 172.20.20.88
+        clab-scalability-test-r2:
+          ansible_host: 172.20.20.31
+        clab-scalability-test-r20:
+          ansible_host: 172.20.20.38
+        clab-scalability-test-r21:
+          ansible_host: 172.20.20.76
+        clab-scalability-test-r22:
+          ansible_host: 172.20.20.50
+        clab-scalability-test-r23:
+          ansible_host: 172.20.20.55
+        clab-scalability-test-r24:
+          ansible_host: 172.20.20.84
+        clab-scalability-test-r25:
+          ansible_host: 172.20.20.101
+        clab-scalability-test-r26:
+          ansible_host: 172.20.20.95
+        clab-scalability-test-r27:
+          ansible_host: 172.20.20.69
+        clab-scalability-test-r28:
+          ansible_host: 172.20.20.30
+        clab-scalability-test-r29:
+          ansible_host: 172.20.20.39
+        clab-scalability-test-r3:
+          ansible_host: 172.20.20.80
+        clab-scalability-test-r30:
+          ansible_host: 172.20.20.93
+        clab-scalability-test-r31:
+          ansible_host: 172.20.20.90
+        clab-scalability-test-r32:
+          ansible_host: 172.20.20.23
+        clab-scalability-test-r33:
+          ansible_host: 172.20.20.8
+        clab-scalability-test-r34:
+          ansible_host: 172.20.20.18
+        clab-scalability-test-r35:
+          ansible_host: 172.20.20.60
+        clab-scalability-test-r36:
+          ansible_host: 172.20.20.89
+        clab-scalability-test-r37:
+          ansible_host: 172.20.20.19
+        clab-scalability-test-r38:
+          ansible_host: 172.20.20.24
+        clab-scalability-test-r39:
+          ansible_host: 172.20.20.97
+        clab-scalability-test-r4:
+          ansible_host: 172.20.20.5
+        clab-scalability-test-r40:
+          ansible_host: 172.20.20.16
+        clab-scalability-test-r41:
+          ansible_host: 172.20.20.83
+        clab-scalability-test-r42:
+          ansible_host: 172.20.20.94
+        clab-scalability-test-r43:
+          ansible_host: 172.20.20.61
+        clab-scalability-test-r44:
+          ansible_host: 172.20.20.65
+        clab-scalability-test-r45:
+          ansible_host: 172.20.20.11
+        clab-scalability-test-r46:
+          ansible_host: 172.20.20.99
+        clab-scalability-test-r47:
+          ansible_host: 172.20.20.43
+        clab-scalability-test-r48:
+          ansible_host: 172.20.20.40
+        clab-scalability-test-r49:
+          ansible_host: 172.20.20.81
+        clab-scalability-test-r5:
+          ansible_host: 172.20.20.15
+        clab-scalability-test-r50:
+          ansible_host: 172.20.20.21
+        clab-scalability-test-r51:
+          ansible_host: 172.20.20.20
+        clab-scalability-test-r52:
+          ansible_host: 172.20.20.70
+        clab-scalability-test-r53:
+          ansible_host: 172.20.20.77
+        clab-scalability-test-r54:
+          ansible_host: 172.20.20.59
+        clab-scalability-test-r55:
+          ansible_host: 172.20.20.75
+        clab-scalability-test-r56:
+          ansible_host: 172.20.20.49
+        clab-scalability-test-r57:
+          ansible_host: 172.20.20.33
+        clab-scalability-test-r58:
+          ansible_host: 172.20.20.98
+        clab-scalability-test-r59:
+          ansible_host: 172.20.20.51
+        clab-scalability-test-r6:
+          ansible_host: 172.20.20.6
+        clab-scalability-test-r60:
+          ansible_host: 172.20.20.12
+        clab-scalability-test-r61:
+          ansible_host: 172.20.20.96
+        clab-scalability-test-r62:
+          ansible_host: 172.20.20.22
+        clab-scalability-test-r63:
+          ansible_host: 172.20.20.3
+        clab-scalability-test-r64:
+          ansible_host: 172.20.20.14
+        clab-scalability-test-r65:
+          ansible_host: 172.20.20.67
+        clab-scalability-test-r66:
+          ansible_host: 172.20.20.100
+        clab-scalability-test-r67:
+          ansible_host: 172.20.20.48
+        clab-scalability-test-r68:
+          ansible_host: 172.20.20.26
+        clab-scalability-test-r69:
+          ansible_host: 172.20.20.37
+        clab-scalability-test-r7:
+          ansible_host: 172.20.20.9
+        clab-scalability-test-r70:
+          ansible_host: 172.20.20.36
+        clab-scalability-test-r71:
+          ansible_host: 172.20.20.58
+        clab-scalability-test-r72:
+          ansible_host: 172.20.20.87
+        clab-scalability-test-r73:
+          ansible_host: 172.20.20.29
+        clab-scalability-test-r74:
+          ansible_host: 172.20.20.10
+        clab-scalability-test-r75:
+          ansible_host: 172.20.20.47
+        clab-scalability-test-r76:
+          ansible_host: 172.20.20.63
+        clab-scalability-test-r77:
+          ansible_host: 172.20.20.71
+        clab-scalability-test-r78:
+          ansible_host: 172.20.20.4
+        clab-scalability-test-r79:
+          ansible_host: 172.20.20.17
+        clab-scalability-test-r8:
+          ansible_host: 172.20.20.86
+        clab-scalability-test-r80:
+          ansible_host: 172.20.20.79
+        clab-scalability-test-r81:
+          ansible_host: 172.20.20.2
+        clab-scalability-test-r82:
+          ansible_host: 172.20.20.64
+        clab-scalability-test-r83:
+          ansible_host: 172.20.20.74
+        clab-scalability-test-r84:
+          ansible_host: 172.20.20.52
+        clab-scalability-test-r85:
+          ansible_host: 172.20.20.66
+        clab-scalability-test-r86:
+          ansible_host: 172.20.20.57
+        clab-scalability-test-r87:
+          ansible_host: 172.20.20.34
+        clab-scalability-test-r88:
+          ansible_host: 172.20.20.25
+        clab-scalability-test-r89:
+          ansible_host: 172.20.20.68
+        clab-scalability-test-r9:
+          ansible_host: 172.20.20.44
+        clab-scalability-test-r90:
+          ansible_host: 172.20.20.53
+        clab-scalability-test-r91:
+          ansible_host: 172.20.20.32
+        clab-scalability-test-r92:
+          ansible_host: 172.20.20.27
+        clab-scalability-test-r93:
+          ansible_host: 172.20.20.85
+        clab-scalability-test-r94:
+          ansible_host: 172.20.20.46
+        clab-scalability-test-r95:
+          ansible_host: 172.20.20.62
+        clab-scalability-test-r96:
+          ansible_host: 172.20.20.92
+        clab-scalability-test-r97:
+          ansible_host: 172.20.20.28
+        clab-scalability-test-r98:
+          ansible_host: 172.20.20.45
+        clab-scalability-test-r99:
+          ansible_host: 172.20.20.7
