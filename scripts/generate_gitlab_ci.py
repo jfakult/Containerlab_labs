@@ -19,19 +19,6 @@ stages:
 
 """
 
-CHECK_JOB = """
-check_gitlab_ci:
-  stage: validate
-  image: python:3.11
-  tags: [containerlab]
-  script:
-    - pip install --quiet --disable-pip-version-check --no-cache-dir filecmp
-    - cp .gitlab-ci.yml .gitlab-ci.yml.generated
-    - python3 scripts/gen_gitlab_ci.py
-    - diff -u .gitlab-ci.yml .gitlab-ci.yml.generated && echo "CI file is current." || (echo "❌ .gitlab-ci.yml is outdated! Run scripts/gen_gitlab_ci.py"; exit 1)
-"""
-
-
 def main():
     jobs = []
     for lab in sorted(LABS_DIR.iterdir()):
@@ -52,7 +39,7 @@ def main():
 
 
     with open(CI_FILE, "w") as f:
-        f.write(HEADER + "\n".join(jobs)) # + CHECK_JOB)
+        f.write(HEADER + "\n".join(jobs))
 
     print(f"✅ Generated {CI_FILE} with {len(jobs)} jobs.")
 
