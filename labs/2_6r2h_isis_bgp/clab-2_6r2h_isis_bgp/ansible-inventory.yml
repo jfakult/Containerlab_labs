@@ -8,18 +8,18 @@ all:
     linux:
       hosts:
         clab-2_6r2h_isis_bgp-h1:
-          ansible_host: 172.20.20.3
+          ansible_host: 172.20.20.7
         clab-2_6r2h_isis_bgp-h2:
           ansible_host: 172.20.20.2
         clab-2_6r2h_isis_bgp-r1:
           ansible_host: 172.20.20.8
         clab-2_6r2h_isis_bgp-r2:
-          ansible_host: 172.20.20.4
-        clab-2_6r2h_isis_bgp-r3:
-          ansible_host: 172.20.20.7
-        clab-2_6r2h_isis_bgp-r4:
-          ansible_host: 172.20.20.5
-        clab-2_6r2h_isis_bgp-r5:
-          ansible_host: 172.20.20.9
-        clab-2_6r2h_isis_bgp-r6:
           ansible_host: 172.20.20.6
+        clab-2_6r2h_isis_bgp-r3:
+          ansible_host: 172.20.20.3
+        clab-2_6r2h_isis_bgp-r4:
+          ansible_host: 172.20.20.9
+        clab-2_6r2h_isis_bgp-r5:
+          ansible_host: 172.20.20.4
+        clab-2_6r2h_isis_bgp-r6:
+          ansible_host: 172.20.20.5

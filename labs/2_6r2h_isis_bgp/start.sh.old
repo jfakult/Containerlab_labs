@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Old startup.sh. This was used to manually setup docker instances and networks
+# Now we just use container lab to do this
+#     cd to lab folder then
+#     containerlab -t topology.yaml [deploy/destroy/graph/inspect]
+
 set -e
 
 NET_NAME="frr-net"

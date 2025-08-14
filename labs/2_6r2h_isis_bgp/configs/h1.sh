@@ -3,6 +3,9 @@
 # Wait just a sec for containerlab to get everything going
 sleep 5
 
+#Note: use "sh -l" to get the PS1 setup instead of this. Pure sh is unfriendly
+#PS1="$(hostname): \w \$"
+
 ip link set dev eth1 up
 ip address add 10.255.1.2/24 dev eth1
 ip route delete default

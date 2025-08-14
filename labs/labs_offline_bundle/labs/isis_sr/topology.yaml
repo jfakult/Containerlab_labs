@@ -1,0 +1,37 @@
+name: isis_sr
+prefix: clab
+mgmt:
+  network: mgmt
+  ipv4-subnet: 172.20.20.0/24
+
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r1.conf:/etc/frr/frr.conf
+    r2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r2.conf:/etc/frr/frr.conf
+    r3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/r3.conf:/etc/frr/frr.conf
+    h1:
+      kind: linux
+      image: alpine:latest
+      binds:
+        - configs/h1.sh:/startup.sh
+      cmd: "/bin/sh /startup.sh"
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r2:eth2", "r3:eth1"]
+    - endpoints: ["r1:eth2", "h1:eth1"]
