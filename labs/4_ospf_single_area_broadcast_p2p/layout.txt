@@ -1,0 +1,17 @@
+                       ┌──────────── Core (Area 0) ────────────┐
+                       │                                       │
+                       │     VLAN10 (OSPF broadcast domain)    │
+                       │                                       │
+                       │   C1 ───── DR ───── C2 (BDR)          │
+                       │     │               │                 │
+                       │     │               │                 │
+                       │   DistA ─────────── DistB             │
+                       │     │               │                 │
+                       └─────┴───────────────┴─────────────────┘
+                              │               │
+                              │               │
+                      VLAN20 (Users)     VLAN30 (Voice)
+                              │               │
+                            Edge1           Edge2
+                              │               │
+                             h1              h2

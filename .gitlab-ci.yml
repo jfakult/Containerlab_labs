@@ -24,3 +24,11 @@ validate_3_100r_ram_stress_test:
   rules:
     - changes:
         - labs/3_100r_ram_stress_test/**
+
+validate_4_ospf_single_area_broadcast_p2p:
+  <<: *validate_template
+  variables:
+    LAB_PATH: labs/4_ospf_single_area_broadcast_p2p
+  rules:
+    - changes:
+        - labs/4_ospf_single_area_broadcast_p2p/**

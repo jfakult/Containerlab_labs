@@ -1,0 +1,78 @@
+name: ospf_single_area_broadcast_p2p
+prefix: clab
+
+mgmt:
+  network: mgmt
+  ipv4-subnet: 172.20.21.0/24
+
+topology:
+  nodes:
+    vlan10:
+      kind: bridge
+
+    rcr1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/rcr1.conf:/etc/frr/frr.conf
+    rcr2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/rcr2.conf:/etc/frr/frr.conf
+    hcr1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/hcr1.conf:/etc/frr/frr.conf
+    hcr2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/hcr2.conf:/etc/frr/frr.conf
+    ecr1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/ecr1.conf:/etc/frr/frr.conf
+    ecr2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - daemons.conf:/etc/frr/daemons
+        - configs/ecr2.conf:/etc/frr/frr.conf
+
+    h1:
+      kind: linux
+      image: alpine:latest
+      binds:
+        - configs/h1.sh:/startup.sh
+      cmd: "/bin/sh /startup.sh"
+    h2:
+      kind: linux
+      image: alpine:latest
+      binds:
+        - configs/h2.sh:/startup.sh
+      cmd: "/bin/sh /startup.sh"
+
+  links:
+    # --- Broadcast "VLAN10" style segment (multi-access) ---
+    # Containerlab will create a shared Linux bridge for all endpoints in this link,
+    # giving you a true broadcast domain for DR/BDR election and Type-2 LSAs.
+    - endpoints: ["rcr1:eth1", "vlan10:eth1"]
+    - endpoints: ["rcr2:eth1", "vlan10:eth2"]
+    - endpoints: ["hcr1:eth1", "vlan10:eth3"]
+    - endpoints: ["hcr2:eth1", "vlan10:eth4"]
+
+    # --- Point-to-point uplinks from distribution to edges (use /31s in configs) ---
+    - endpoints: ["hcr1:eth2", "ecr1:eth1"]
+    - endpoints: ["hcr2:eth2", "ecr2:eth1"]
+
+    # --- User LANs (not running OSPF) ---
+    - endpoints: ["ecr1:eth2", "h1:eth1"]
+    - endpoints: ["ecr2:eth2", "h2:eth1"]

@@ -1,0 +1,412 @@
+{
+  "name": "ospf_single_area_broadcast_p2p",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "mgmt",
+        "bridge": "br-45b8465770aa",
+        "ipv4-subnet": "172.20.21.0/24",
+        "ipv4-gw": "172.20.21.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "ecr1": {
+      "index": "0",
+      "shortname": "ecr1",
+      "longname": "clab-ospf_single_area_broadcast_p2p-ecr1",
+      "fqdn": "ecr1.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/ecr1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/ecr1",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-ecr1",
+        "clab-node-name": "ecr1",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ecr2": {
+      "index": "1",
+      "shortname": "ecr2",
+      "longname": "clab-ospf_single_area_broadcast_p2p-ecr2",
+      "fqdn": "ecr2.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/ecr2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/ecr2",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-ecr2",
+        "clab-node-name": "ecr2",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h1": {
+      "index": "2",
+      "shortname": "h1",
+      "longname": "clab-ospf_single_area_broadcast_p2p-h1",
+      "fqdn": "h1.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/h1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/h1",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h2": {
+      "index": "3",
+      "shortname": "h2",
+      "longname": "clab-ospf_single_area_broadcast_p2p-h2",
+      "fqdn": "h2.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/h2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/h2",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "hcr1": {
+      "index": "4",
+      "shortname": "hcr1",
+      "longname": "clab-ospf_single_area_broadcast_p2p-hcr1",
+      "fqdn": "hcr1.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/hcr1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/hcr1",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-hcr1",
+        "clab-node-name": "hcr1",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "hcr2": {
+      "index": "5",
+      "shortname": "hcr2",
+      "longname": "clab-ospf_single_area_broadcast_p2p-hcr2",
+      "fqdn": "hcr2.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/hcr2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/hcr2",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-hcr2",
+        "clab-node-name": "hcr2",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rcr1": {
+      "index": "6",
+      "shortname": "rcr1",
+      "longname": "clab-ospf_single_area_broadcast_p2p-rcr1",
+      "fqdn": "rcr1.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/rcr1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/rcr1",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-rcr1",
+        "clab-node-name": "rcr1",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rcr2": {
+      "index": "7",
+      "shortname": "rcr2",
+      "longname": "clab-ospf_single_area_broadcast_p2p-rcr2",
+      "fqdn": "rcr2.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/rcr2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.21.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/rcr2",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-rcr2",
+        "clab-node-name": "rcr2",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    },
+    "vlan10": {
+      "index": "8",
+      "shortname": "vlan10",
+      "longname": "clab-ospf_single_area_broadcast_p2p-vlan10",
+      "fqdn": "vlan10.ospf_single_area_broadcast_p2p.io",
+      "group": "",
+      "labdir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/vlan10",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-45b8465770aa",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/clab-ospf_single_area_broadcast_p2p/vlan10",
+        "clab-node-longname": "clab-ospf_single_area_broadcast_p2p-vlan10",
+        "clab-node-name": "vlan10",
+        "clab-node-type": "",
+        "clab-owner": "jake",
+        "clab-topo-file": "/home/jake/Documents/Networking/ContainerLab_Labs/labs/4_ospf_single_area_broadcast_p2p/topology.yaml",
+        "containerlab": "ospf_single_area_broadcast_p2p"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "rcr1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:21:19:f4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "vlan10",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:10:09:e9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rcr2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:42:8e:60",
+        "peer": "z"
+      },
+      "z": {
+        "node": "vlan10",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:62:e7:a5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "hcr1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:c4:3e:16",
+        "peer": "z"
+      },
+      "z": {
+        "node": "vlan10",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:57:91:29",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "hcr2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f5:a8:82",
+        "peer": "z"
+      },
+      "z": {
+        "node": "vlan10",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:75:0b:92",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "hcr1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:47:45:de",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ecr1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:00:0f:71",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "hcr2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:96:7a:b1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ecr2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:64:02:5e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ecr1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b3:ae:35",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e9:15:82",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ecr2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:67:1b:73",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:65:24:67",
+        "peer": "a"
+      }
+    }
+  ]
+}

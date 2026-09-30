@@ -1,41 +1,46 @@
 ---
+vlan10:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
+ecr1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.21.2
+ecr2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.21.3
 h1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.9
+    hostname: 172.20.21.8
 h2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.3
-r1:
+    hostname: 172.20.21.5
+hcr1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.5
-r2:
+    hostname: 172.20.21.4
+hcr2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.4
-r3:
+    hostname: 172.20.21.7
+rcr1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.6
-r4:
+    hostname: 172.20.21.6
+rcr2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.22.2
-r5:
-    username: 
-    password: 
-    platform: linux
-    hostname: 172.20.22.7
-r6:
-    username: 
-    password: 
-    platform: linux
-    hostname: 172.20.22.8
+    hostname: 172.20.21.9

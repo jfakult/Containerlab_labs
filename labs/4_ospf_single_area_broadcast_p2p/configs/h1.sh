@@ -6,12 +6,11 @@ sleep 5
 #Note: use "sh -l" to get the PS1 setup instead of this. Pure sh is unfriendly
 #PS1="$(hostname): \w \$"
 
+# On vlan 20
 ip link set dev eth1 up
-ip address add 10.255.1.2/30 dev eth1
+ip address add 10.0.20.100/24 dev eth1
 ip route delete default
-ip route add default via 10.255.1.1
-
-export PS1="$(hostname): \w \$ "
+ip route add default via 10.0.20.1
 
 # Containerlab will shut down the container if no process is running
 sleep 365d
